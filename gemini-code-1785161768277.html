@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Mahmoud - IT & Cybersecurity Portfolio</title>
+    <style>
+        /* Base and Typography */
+        :root {
+            --bg-dark: #1F0D29;
+            --bg-gradient: radial-gradient(circle at top left, #3E185C, #0F0514);
+            --accent-cyan: #00FFFF;
+            --accent-purple: #9D4EDD;
+            --light-section: #F4EEF8;
+            --text-light: #FFFFFF;
+            --text-dark: #2C1338;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section (Dark Theme with Canvas) */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-gradient);
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        #meshCanvas {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            background: rgba(31, 13, 41, 0.4);
+            padding: 40px;
+            border-radius: 16px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+        }
+
+        .hero p.summary {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #E6D5F2;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid #5A2A82;
+            padding: 12px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            color: var(--accent-cyan);
+        }
+
+        /* CV Content Sections (Light Theme per reference image) */
+        .cv-container {
+            background-color: var(--light-section);
+            color: var(--text-dark);
+            padding: 80px 20px;
+        }
+
+        .section-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--bg-dark);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--accent-purple);
+        }
+
+        .card h3 {
+            color: var(--accent-purple);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .card h4 {
+            color: var(--text-dark);
+            margin: 5px 0 15px 0;
+            font-size: 1rem;
+        }
+
+        .experience-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .experience-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-purple);
+            font-size: 1.5rem;
+            top: -5px;
+        }
+        
+        .cite {
+            font-size: 0.75em;
+            color: #888;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <canvas id="meshCanvas"></canvas>
+        <div class="hero-content">
+            <h1>AMIR MAHMOUD </h1>
+            <div class="contact-info">
+                <span>Mount- Leb, Chouf, Batloun </span> |
+                <span>76 084 845 </span> |
+                <span>amirmahmoud500@gmail.com </span>
+            </div>
+            <p class="summary">
+                Tech-savvy IT guy with over 3 years of freelance experience, passionate about solving network, hardware, and cybersecurity issues while delivering clear, user-friendly customer support. 
+            </p>
+            <a href="mailto:amirmahmoud500@gmail.com" class="btn">Setup a chat</a>
+        </div>
+    </div>
+
+    <!-- Main CV Content -->
+    <div class="cv-container">
+        <div class="section-wrapper">
+            <h2 class="section-title">Professional Profile</h2>
+            
+            <div class="grid-3">
+                <!-- Education -->
+                <div class="card">
+                    <h3>Education</h3>
+                    <h4>Lebanese University - Abey <br>
+                    <small>2025-present </small></h4>
+                    <p>Mechanical industrial engineering (Finishing In: 2028) </p>
+                </div>
+
+                <!-- Activities 1 -->
+                <div class="card">
+                    <h3>Activities</h3>
+                    <h4>Overhauled Hammana's Technical Institute Computer Lab <br>
+                    <small>05/2025 </small></h4>
+                    <p>Troubleshooting over 20 legacy systems and configuring networks to re-establish a functional learning environment. </p>
+                </div>
+
+                <!-- Activities 2 -->
+                <div class="card">
+                    <h3>Activities</h3>
+                    <h4>Delegate - Model United Nations Conference | LAU <br>
+                    <small>01/2020 </small></h4>
+                    <p>Selected to participate in the 10th GC LAU Model UN annual conference.  Engaged in problem solving, public speaking, and international relations exercises, which sharpened communication and negotiation skills. </p>
+                </div>
+            </div>
+
+            <!-- Full Experience List -->
+            <div class="card" style="border-top-color: var(--accent-cyan);">
+                <h3 style="color: var(--text-dark);">Technical Expertise & Experience</h3>
+                <ul class="experience-list">
+                    <li>Technical support for both software and hardware problems and in both remote and on-site situations. </li>
+                    <li>Knowledge of networking including switches, access points, and main router configuration (port forwarding, Qos, private DNS). Specifically, in cudy, mikrotik, linksys, tplink and opensource (openwrt) router operating systems. </li>
+                    <li>Deep knowledge of windows operating system and Linux operating systems and in their computer architecture (x64, arm64). </li>
+                    <li>Knowledge of websites and databases (I have set up my own website for my games try: amirmahmoud500.github.io/hardrive). </li>
+                    <li>Very deep knowledge of software downloading either being games or work-related software (AutoCAD, 3ds max, Ansys physics simulation, SolidWorks). </li>
+                    <li>Cybersecurity and penetration testing using tools like Nmap and such to check pppoe system security specifically wan and other routers security (successfully penetrated more than 6 pppoe accounts). </li>
+                    <li>Big fan of local hosting such as NAS (Network Attached Storage) and website hosting. As well as taking control of my local internet using a private DNS. </li>
+                    <li>Computer building and maintenance (computer hardware repasting, benchmarking, stress testing, and PC building). </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for 3D Moving Mesh -->
+    <script>
+        const canvas = document.getElementById('meshCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        let time = 0;
+        const cols = 60; 
+        const rows = 40;
+        const spacing = 45; // Size of grid squares
+
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+
+            // Styling the mesh based on the reference image
+            ctx.strokeStyle = 'rgba(157, 78, 221, 0.4)'; // Purple wireframe
+            ctx.lineWidth = 1.2;
+
+            let focalLength = 350; // Camera perspective
+            let camY = -150;       // Camera height
+            let camZ = -250;       // Camera distance
+
+            // Render Horizontal Lines
+            for (let y = 0; y < rows - 1; y++) {
+                ctx.beginPath();
+                let started = false;
+                for (let x = 0; x < cols; x++) {
+                    
+                    let worldX = (x - cols/2) * spacing;
+                    let worldZ = y * spacing + (time % spacing); // The forward motion
+                    
+                    // Procedural terrain generation using Math.sin/cos for the "waves"
+                    let worldY = Math.sin(worldX * 0.01 + time * 0.02) * Math.cos(worldZ * 0.015) * 80; 
+                    worldY += Math.sin(worldX * 0.04) * 15; 
+                    worldY += Math.cos(worldZ * 0.05) * 10;
+
+                    let dz = worldZ - camZ;
+                    
+                    if (dz > 0) {
+                        let projX = (worldX * focalLength) / dz + width / 2;
+                        let projY = ((worldY - camY) * focalLength) / dz + height / 2 + 100; // Shift down slightly
+
+                        if (!started) {
+                            ctx.moveTo(projX, projY);
+                            started = true;
+                        } else {
+                            ctx.lineTo(projX, projY);
+                        }
+                    }
+                }
+                ctx.stroke();
+            }
+            
+            // Render Vertical Lines
+            for (let x = 0; x < cols; x++) {
+                ctx.beginPath();
+                let started = false;
+                for (let y = 0; y < rows - 1; y++) {
+                    let worldX = (x - cols/2) * spacing;
+                    let worldZ = y * spacing + (time % spacing);
+                    
+                    let worldY = Math.sin(worldX * 0.01 + time * 0.02) * Math.cos(worldZ * 0.015) * 80;
+                    worldY += Math.sin(worldX * 0.04) * 15;
+                    worldY += Math.cos(worldZ * 0.05) * 10;
+
+                    let dz = worldZ - camZ;
+                    if (dz > 0) {
+                        let projX = (worldX * focalLength) / dz + width / 2;
+                        let projY = ((worldY - camY) * focalLength) / dz + height / 2 + 100;
+
+                        if (!started) {
+                            ctx.moveTo(projX, projY);
+                            started = true;
+                        } else {
+                            ctx.lineTo(projX, projY);
+                        }
+                    }
+                }
+                ctx.stroke();
+            }
+
+            time += 1.5; // Speed of the moving wave
+            requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
+</body>
+</html>
